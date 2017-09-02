@@ -7,15 +7,19 @@ $block-about-text-gap-top: 100px
 
 /* MIXINS */
 
+@mixin text-up()
+	font-size: 45px
+	text-transform: uppercase
+	font-weight: 900
+	letter-spacing: -0.06em
+
 @mixin title-icon($font, $top, $left, $trans, $color)
 	font-family: $font
-	font-size: 45px
-	font-weight: 900
 	top: $top
 	left: $left
 	transform: $trans
 	color: $color
-	letter-spacing: -0.06em
+	@include text-up()
 
 @mixin down-button($top)
 	position: absolute
@@ -44,6 +48,25 @@ body
 .blocks
 	width: 100%
 
+.more
+	position: relative
+	top: 50px
+	&__arrow
+		height: 21px
+		width: 190px
+		position: relative
+		top: -20px
+		left: 60px
+		background-image: url('./images/more.png')
+		background-size: 100%
+
+.clear-fix::after
+	content: ''
+	display: block
+	clear: both
+	height: 0px
+	visibility: hidden
+
 /* - - - - - - - - - - - - - - - - - - - - - */
 
 /* FIRST BLOCK - HOME PAGE */
@@ -58,7 +81,6 @@ body
 		.home-block__title-black, .home-block__title-yellow, .home-block__title-blue, .it-img, .shair-img
 			position: absolute
 		.home-block__title
-			text-transform: uppercase
 			z-index: 3
 			&-black
 				top: 20px
@@ -70,14 +92,13 @@ body
 			&-black
 				@include title-icon(Segoe UI, 30px, 5%, none, #000)
 		.home-block-info
-			text-transform: uppercase
+			@include text-up()
 			z-index: 3
 			color: #aaa
 			position: absolute
 			left: 5%
 			top: 250px
 			font-size: 25px
-			font-weight: 900
 		.it-img
 			top: 0
 			left: 150px
@@ -114,36 +135,19 @@ body
 				height: 500px
 				padding: 50px 0
 			&__block-title
+				@include text-up()
 				display: block
 				position: absolute
 				top: $block-about-text-gap-top
 				left: 310px
-				font-size: 45px
-				text-transform: uppercase
-				font-weight: 900
-				letter-spacing: -0.06em
 			&__title
 				@include title-icon(Segoe UI, $block-about-text-gap-top + 100, 310px, skewY(-15deg), #83d0f5)
 				position: absolute
-				text-transform: uppercase
 		&__right
 			width: 39%
 			position: relative
 			float: left
 			margin: $block-about-text-gap-top 0
-			&__text
-			&__more
-				position: relative
-				top: 50px
-				&__arrow
-					height: 21px
-					width: 190px
-					position: relative
-					top: -20px
-					left: 60px
-					background-image: url('./images/more.png')
-					background-size: 100%
-
 		.button-slide-down
 			@include down-button(475px)
 						
@@ -151,3 +155,117 @@ body
 
 /* THIRD BLOCK - ABOUT BLOCK */
 
+.this-year
+	height: 700px
+	margin-top: 100px
+	position: relative
+	&-block
+		width: 700px
+		margin: auto
+		&__title
+			text-align: center
+			@include text-up()
+			margin: 5px
+			color: #ffdd00
+		&__main
+			margin: 100px 0
+			.what-this-year
+				margin: 1%
+				float: left
+				width: 30%
+				height: 300px
+				.detail-title
+					@include text-up()
+					font-size: 20px
+				span
+					display: block
+					height: 200px
+				.more__arrow
+					top: -18px
+					height: 18px
+					width: 150px
+	.button-slide-down
+			@include down-button(550px)
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* FOURTH BLOCK - WHY BLOCK */
+
+.why
+	padding: 50px
+	background-image: url('./images/back.jpg')
+	position: relative
+	&__img
+		top: 70px
+		height: 600px
+		float: right
+		position: relative
+	&-block
+		padding: 150px 20%
+		width: $block-width
+		width: 300px
+		&__title
+			@include text-up()
+		span
+			display: block
+			margin: 50px 0
+		&__button
+			width: 50%
+			border-radius: 1px
+			background-color: #83d0f5
+			text-align: center
+			text-transform: uppercase
+			padding: 1rem 1rem 1rem 0
+			color: #fff
+			position: relative
+			.more__arrow
+				position: absolute
+				background-image: url('./images/more-small.png')
+				height: 23px
+				width: 18px
+				top: 13px
+				left: 81%
+	.button-slide-down
+		@include down-button(650px)
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* FIFTH BLOCK - DATE BLOCK */
+
+.date
+	height: 550px
+	position: relative
+	&__img
+		position: absolute
+		float: left
+		top: 80px
+		height: 400px
+		left: calc( 10% - 250px )
+		z-index: 9
+	&-block
+		margin: 100px 45%
+		position: relative
+		width: 550px
+		position: 
+		z-index: 10
+		&__title
+			@include text-up()
+		&__date
+			margin: 20px 0
+			font-size: 35px
+			font-weight: 900
+		&__place
+			@include text-up()
+			font-size: 17px
+			color: #bbb
+			margin-bottom: 25px
+	.button-slide-down
+		@include down-button(450px)
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* SIX BLOCK - DATE BLOCK */
+
+.contacts
+	height: 900px
+	background-color: #3b9

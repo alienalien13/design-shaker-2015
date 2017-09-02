@@ -14,35 +14,55 @@ html(lang="en")
 				.home-block__title.home-block__title-yellow design<br>shaker<br>2015
 				img(src=require('./images/shair.png'), alt="shair", class="shair-img")
 				.home-block__title.home-block__title-blue design<br>shaker<br>2015
-				img(src=require('./images/down.png'), alt="down", class="button-slide-down")
+				include components/down-button.pug
 				.home-block-info 19. - 22.3.<br>pva expo praha<br>Letňany
 
 		section.about-block.blocks
 			.about-block-wrap
 				.about-block-wrap__left
-					img(src=require('./images/it-2.jpg'), alt="down", class="about-block-wrap__left__img")
+					img(src=require('./images/it-2.jpg'), alt="it", class="about-block-wrap__left__img")
 					h2.about-block-wrap__left__block-title o akci
 					.about-block-wrap__left__title design<br>shaker<br>2015
 				.about-block-wrap__right
 					.about-block-wrap__right__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quibusdam corrupti, dignissimos aspernatur laudantium placeat adipisci tenetur delectus sunt voluptas omnis minima, ratione nisi repudiandae voluptatibus suscipit obcaecati nam aliquam!Ratione, cupiditate minus? Sapiente incidunt placeat cupiditate exercitationem consequuntur autem quod eaque ab laudantium repudiandae! Illum quos dignissimos totam. Tenetur fuga et animi quam quae pariatur ducimus incidunt magni harum.
-					.about-block-wrap__right__more
-						| VÍCE
-						.about-block-wrap__right__more__arrow
-				img(src=require('./images/down.png'), alt="down", class="button-slide-down")
+					include components/more-arrow.pug
+				include components/down-button.pug
 
 		section.this-year.blocks
 			.this-year-block
 				h2.this-year-block__title letos trochu jinak
 				.this-year-block__main
 					.what-this-year
+						h3.detail-title big deal
+						span Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis adipisci nesciunt fuga eaque facere illum, provident, nostrum doloremque quisquam ducimus laborum facilis libero quo corporis minus expedita placeat vero culpa?
+						include components/more-arrow.pug
 					.what-this-year
+						h3.detail-title fresh space
+						span Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium libero eum unde assumenda optio corporis enim in aliquid adipisci corrupti. Dignissimos deleniti enim veniam, aspernatur voluptatibus repudiandae tempore quas ducimus!
+						include components/more-arrow.pug
 					.what-this-year
+						h3.detail-title field office
+						span Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt facilis quasi magni! Praesentium laborum enim consequatur, dolores dignissimos soluta aliquam debitis quidem, accusamus, ea distinctio quis rerum aliquid vitae nesciunt.
+						include components/more-arrow.pug
+					.clear-fix
+				include components/down-button.pug
 
-		section.blocks
-			.container 2
+		section.why.blocks
+			img(src=require('./images/shairs.png'), alt="shairs", class="why__img")
+			.why-block
+				h2.why-block__title proč<br>vystavovat
+				span Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia fuga magnam sed amet assumenda, velit atque voluptatum tempora tempore molestiae dicta optio delectus consequatur facilis, incidunt ipsa totam architecto.
+				include components/more-button-1.pug
+			include components/down-button.pug
 
-		section.blocks
-			.container 2
+		section.date.blocks
+			img(src=require('./images/glasses.png'), alt="glasses", class="date__img")
+			.date-block
+				.date-block__title save<br>the<br>date
+				.date-block__date 19. - 22.3.<br>2015
+				.date-block__place pva praha letňany
+				include components/more-button-2.pug
+			include components/down-button.pug
 
-		section.blocks
+		section.contacts.blocks
 			.container 2
