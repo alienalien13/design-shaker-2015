@@ -1,0 +1,153 @@
+/* VARIABLES */
+
+$block-width: 900px
+$block-about-text-gap-top: 100px
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* MIXINS */
+
+@mixin title-icon($font, $top, $left, $trans, $color)
+	font-family: $font
+	font-size: 45px
+	font-weight: 900
+	top: $top
+	left: $left
+	transform: $trans
+	color: $color
+	letter-spacing: -0.06em
+
+@mixin down-button($top)
+	position: absolute
+	top: $top
+	left: calc( 50% - 40px )
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* RESET */
+
+h2
+	padding: 0
+	margin: 0
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* COMMON */
+body
+	padding: 0
+	margin: 0
+
+.button-slide-down
+	width: 80px
+	height: 80px
+
+.blocks
+	width: 100%
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* FIRST BLOCK - HOME PAGE */
+
+.home-block
+	height: 600px
+	.home-wrap
+		width: $block-width
+		height: 600px
+		margin: auto
+		position: relative
+		.home-block__title-black, .home-block__title-yellow, .home-block__title-blue, .it-img, .shair-img
+			position: absolute
+		.home-block__title
+			text-transform: uppercase
+			z-index: 3
+			&-black
+				top: 20px
+				left: 40px
+			&-yellow
+				@include title-icon(Segoe UI, -13px, 45%, rotate(90deg), #ffdd00)
+			&-blue
+				@include title-icon(Segoe UI, 30%, 75%, skewY(-15deg), #83d0f5)
+			&-black
+				@include title-icon(Segoe UI, 30px, 5%, none, #000)
+		.home-block-info
+			text-transform: uppercase
+			z-index: 3
+			color: #aaa
+			position: absolute
+			left: 5%
+			top: 250px
+			font-size: 25px
+			font-weight: 900
+		.it-img
+			top: 0
+			left: 150px
+			width: 226px
+			height: 329px
+			z-index: 2
+		.shair-img
+			top: 200px
+			left: 400px
+			width: 265px
+			height: 292px
+			z-index: 1
+		.button-slide-down
+			@include down-button(450px)
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* SECOND BLOCK - ABOUT BLOCK */
+
+.about-block
+	height: 600px
+	background-image: url('./images/back.jpg')
+	&-wrap
+		width: $block-width
+		height: 600px
+		margin: auto
+		position: relative
+		&__left
+			width: 54%
+			float: left
+			position: relative
+			left: -100px
+			&__img
+				height: 500px
+				padding: 50px 0
+			&__block-title
+				display: block
+				position: absolute
+				top: $block-about-text-gap-top
+				left: 310px
+				font-size: 45px
+				text-transform: uppercase
+				font-weight: 900
+				letter-spacing: -0.06em
+			&__title
+				@include title-icon(Segoe UI, $block-about-text-gap-top + 100, 310px, skewY(-15deg), #83d0f5)
+				position: absolute
+				text-transform: uppercase
+		&__right
+			width: 39%
+			position: relative
+			float: left
+			margin: $block-about-text-gap-top 0
+			&__text
+			&__more
+				position: relative
+				top: 50px
+				&__arrow
+					height: 21px
+					width: 190px
+					position: relative
+					top: -20px
+					left: 60px
+					background-image: url('./images/more.png')
+					background-size: 100%
+
+		.button-slide-down
+			@include down-button(475px)
+						
+/* - - - - - - - - - - - - - - - - - - - - - */
+
+/* THIRD BLOCK - ABOUT BLOCK */
+
