@@ -7,6 +7,12 @@ h2 {
   padding: 0;
   margin: 0; }
 
+.name {
+  margin: 0; }
+
+.contacts-block__place h3 {
+  margin: 0; }
+
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* COMMON */
 body {
@@ -44,7 +50,8 @@ body {
 .home-block {
   height: 600px; }
   .home-block .home-wrap {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     height: 600px;
     margin: auto;
     position: relative; }
@@ -58,7 +65,7 @@ body {
       .home-block .home-wrap .home-block__title-yellow {
         font-family: Segoe UI;
         top: -13px;
-        left: 45%;
+        left: 51%;
         transform: rotate(90deg);
         color: #ffdd00;
         font-size: 45px;
@@ -78,7 +85,7 @@ body {
       .home-block .home-wrap .home-block__title-black {
         font-family: Segoe UI;
         top: 30px;
-        left: 5%;
+        left: 9%;
         transform: none;
         color: #000;
         font-size: 45px;
@@ -93,18 +100,18 @@ body {
       z-index: 3;
       color: #aaa;
       position: absolute;
-      left: 5%;
+      left: 9%;
       top: 250px;
       font-size: 25px; }
     .home-block .home-wrap .it-img {
       top: 0;
-      left: 150px;
+      left: 28%;
       width: 226px;
       height: 329px;
       z-index: 2; }
     .home-block .home-wrap .shair-img {
-      top: 200px;
-      left: 400px;
+      top: 38%;
+      left: 51%;
       width: 265px;
       height: 292px;
       z-index: 1; }
@@ -119,7 +126,8 @@ body {
   height: 600px;
   background-image: url(./images/back.jpg); }
   .about-block-wrap {
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     height: 600px;
     margin: auto;
     position: relative; }
@@ -156,19 +164,22 @@ body {
       position: relative;
       float: left;
       margin: 100px 0; }
+      .about-block-wrap__right__text {
+        line-height: 1.5; }
     .about-block-wrap .button-slide-down {
       position: absolute;
-      top: 475px;
+      top: 450px;
       left: calc( 50% - 40px); }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
-/* THIRD BLOCK - ABOUT BLOCK */
+/* THIRD BLOCK - THIS YEAR BLOCK */
 .this-year {
-  height: 700px;
+  height: 750px;
   margin-top: 100px;
   position: relative; }
   .this-year-block {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     margin: auto; }
     .this-year-block__title {
       text-align: center;
@@ -193,20 +204,21 @@ body {
           font-size: 20px; }
         .this-year-block__main .what-this-year span {
           display: block;
-          height: 200px; }
+          height: 220px;
+          line-height: 1.5; }
         .this-year-block__main .what-this-year .more__arrow {
           top: -18px;
           height: 18px;
           width: 150px; }
   .this-year .button-slide-down {
     position: absolute;
-    top: 550px;
+    top: 600px;
     left: calc( 50% - 40px); }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* FOURTH BLOCK - WHY BLOCK */
 .why {
-  padding: 50px;
+  padding: 50px 0;
   background-image: url(./images/back.jpg);
   position: relative; }
   .why__img {
@@ -225,7 +237,8 @@ body {
       letter-spacing: -0.06em; }
     .why-block span {
       display: block;
-      margin: 50px 0; }
+      margin: 50px 0;
+      line-height: 1.5; }
     .why-block__button {
       width: 50%;
       border-radius: 1px;
@@ -250,17 +263,17 @@ body {
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* FIFTH BLOCK - DATE BLOCK */
 .date {
-  height: 550px;
+  height: 650px;
   position: relative; }
   .date__img {
     position: absolute;
     float: left;
-    top: 80px;
-    height: 400px;
-    left: calc( 10% - 250px);
+    top: -50px;
+    height: 600px;
+    left: calc( 10% - 450px);
     z-index: 9; }
   .date-block {
-    margin: 100px 45%;
+    margin: 200px 45%;
     position: relative;
     width: 550px;
     z-index: 10; }
@@ -283,11 +296,70 @@ body {
       margin-bottom: 25px; }
   .date .button-slide-down {
     position: absolute;
-    top: 450px;
+    top: 500px;
     left: calc( 50% - 40px); }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* SIX BLOCK - DATE BLOCK */
 .contacts {
-  height: 900px;
-  background-color: #3b9; }
+  height: 1000px;
+  background-image: url(./images/back.jpg); }
+  .contacts img {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 70px 0 0 0; }
+  .contacts-block {
+    width: 80%;
+    width-max: 900px;
+    margin: auto; }
+    .contacts-block__title {
+      font-size: 45px;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      padding: 90px 0; }
+    .contacts-block__contacts .vcard {
+      margin: 1%;
+      width: 23%;
+      float: left; }
+      .contacts-block__contacts .vcard .tel, .contacts-block__contacts .vcard .email {
+        position: relative;
+        top: 10px; }
+    .contacts-block__contacts hr {
+      margin: 70px 0; }
+    .contacts-block__place {
+      float: left; }
+      .contacts-block__place--adress {
+        margin: 10px 0; }
+    .contacts-block__subscribe {
+      float: right; }
+      .contacts-block__subscribe span {
+        text-transform: uppercase;
+        float: left;
+        padding: 1px; }
+      .contacts-block__subscribe .arrow {
+        margin: 0 15px;
+        padding: 3px 0;
+        float: left;
+        width: 120px;
+        height: 15px;
+        background-image: url(./images/more.png);
+        background-size: 100% 100%; }
+      .contacts-block__subscribe .fa {
+        padding: 2px;
+        border-radius: 50%;
+        border: 1px solid #000; }
+        .contacts-block__subscribe .fa-facebook {
+          padding: 2px 5.5px; }
+  .contacts .contacts-block__copyright {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    float: left;
+    background-image: url(./images/back.jpg); }
+    .contacts .contacts-block__copyright:before {
+      content: '2014 Design Shaker. All right reserved.';
+      padding: 0 calc( 50% - 172px);
+      position: relative;
+      top: 45px; }

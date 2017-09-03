@@ -2,6 +2,7 @@
 
 $block-width: 900px
 $block-about-text-gap-top: 100px
+$prime-blocks-back: url('./images/back.jpg')
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -33,6 +34,11 @@ $block-about-text-gap-top: 100px
 h2
 	padding: 0
 	margin: 0
+.name
+	margin: 0
+.contacts-block__place
+	h3
+		margin: 0
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -74,7 +80,8 @@ body
 .home-block
 	height: 600px
 	.home-wrap
-		width: $block-width
+		width: 100%
+		max-width: $block-width
 		height: 600px
 		margin: auto
 		position: relative
@@ -86,28 +93,28 @@ body
 				top: 20px
 				left: 40px
 			&-yellow
-				@include title-icon(Segoe UI, -13px, 45%, rotate(90deg), #ffdd00)
+				@include title-icon(Segoe UI, -13px, 51%, rotate(90deg), #ffdd00)
 			&-blue
 				@include title-icon(Segoe UI, 30%, 75%, skewY(-15deg), #83d0f5)
 			&-black
-				@include title-icon(Segoe UI, 30px, 5%, none, #000)
+				@include title-icon(Segoe UI, 30px, 9%, none, #000)
 		.home-block-info
 			@include text-up()
 			z-index: 3
 			color: #aaa
 			position: absolute
-			left: 5%
+			left: 9%
 			top: 250px
 			font-size: 25px
 		.it-img
 			top: 0
-			left: 150px
+			left: 28%
 			width: 226px
 			height: 329px
 			z-index: 2
 		.shair-img
-			top: 200px
-			left: 400px
+			top: 38%
+			left: 51%
 			width: 265px
 			height: 292px
 			z-index: 1
@@ -120,9 +127,10 @@ body
 
 .about-block
 	height: 600px
-	background-image: url('./images/back.jpg')
+	background-image: $prime-blocks-back
 	&-wrap
-		width: $block-width
+		width: 100%
+		max-width: $block-width
 		height: 600px
 		margin: auto
 		position: relative
@@ -148,19 +156,22 @@ body
 			position: relative
 			float: left
 			margin: $block-about-text-gap-top 0
+			&__text
+				line-height: 1.5
 		.button-slide-down
-			@include down-button(475px)
+			@include down-button(450px)
 						
 /* - - - - - - - - - - - - - - - - - - - - - */
 
-/* THIRD BLOCK - ABOUT BLOCK */
+/* THIRD BLOCK - THIS YEAR BLOCK */
 
 .this-year
-	height: 700px
+	height: 750px
 	margin-top: 100px
 	position: relative
 	&-block
-		width: 700px
+		width: 100%
+		max-width: 700px
 		margin: auto
 		&__title
 			text-align: center
@@ -179,21 +190,22 @@ body
 					font-size: 20px
 				span
 					display: block
-					height: 200px
+					height: 220px
+					line-height: 1.5
 				.more__arrow
 					top: -18px
 					height: 18px
 					width: 150px
 	.button-slide-down
-			@include down-button(550px)
+			@include down-button(600px)
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
 /* FOURTH BLOCK - WHY BLOCK */
 
 .why
-	padding: 50px
-	background-image: url('./images/back.jpg')
+	padding: 50px 0
+	background-image: $prime-blocks-back
 	position: relative
 	&__img
 		top: 70px
@@ -209,6 +221,7 @@ body
 		span
 			display: block
 			margin: 50px 0
+			line-height: 1.5
 		&__button
 			width: 50%
 			border-radius: 1px
@@ -233,17 +246,17 @@ body
 /* FIFTH BLOCK - DATE BLOCK */
 
 .date
-	height: 550px
+	height: 650px
 	position: relative
 	&__img
 		position: absolute
 		float: left
-		top: 80px
-		height: 400px
-		left: calc( 10% - 250px )
+		top: -50px
+		height: 600px
+		left: calc( 10% - 450px )
 		z-index: 9
 	&-block
-		margin: 100px 45%
+		margin: 200px 45%
 		position: relative
 		width: 550px
 		position: 
@@ -260,12 +273,69 @@ body
 			color: #bbb
 			margin-bottom: 25px
 	.button-slide-down
-		@include down-button(450px)
+		@include down-button(500px)
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
 /* SIX BLOCK - DATE BLOCK */
 
 .contacts
-	height: 900px
-	background-color: #3b9
+	height: 1000px
+	background-image: $prime-blocks-back
+	img
+		position: relative
+		float: left
+		width: 100%
+		margin: 70px 0 0 0
+	&-block
+		width: 80%
+		width-max: $block-width
+		margin: auto
+		&__title
+			@include text-up()
+			padding: 90px 0
+		&__contacts
+			.vcard
+				margin: 1%
+				width: 23%
+				float: left
+				.tel, .email
+					position: relative
+					top: 10px
+			hr
+				margin: 70px 0
+		&__place
+			float: left
+			&--adress
+				margin: 10px 0
+		&__subscribe
+			float: right
+			span
+				text-transform: uppercase
+				float: left
+				padding: 1px
+			.arrow
+				margin: 0 15px
+				padding: 3px 0
+				float: left
+				width: 120px
+				height: 15px
+				background-image: url('./images/more.png')
+				background-size: 100% 100%
+			.fa
+				padding: 2px
+				border-radius: 50%
+				border: 1px solid #000
+				&-facebook
+					padding: 2px 5.5px
+	.contacts-block__copyright
+		width: 100%
+		height: 100px
+		position: relative
+		float: left
+		background-image: $prime-blocks-back
+		&:before
+			content: '2014 Design Shaker. All right reserved.'
+			padding: 0 calc( 50% - 172px )
+			position: relative
+			top: 45px

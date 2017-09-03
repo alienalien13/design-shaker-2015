@@ -4,6 +4,7 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
 		title DesignShaker
 	body
 
@@ -24,7 +25,7 @@ html(lang="en")
 					h2.about-block-wrap__left__block-title o akci
 					.about-block-wrap__left__title design<br>shaker<br>2015
 				.about-block-wrap__right
-					.about-block-wrap__right__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quibusdam corrupti, dignissimos aspernatur laudantium placeat adipisci tenetur delectus sunt voluptas omnis minima, ratione nisi repudiandae voluptatibus suscipit obcaecati nam aliquam!Ratione, cupiditate minus? Sapiente incidunt placeat cupiditate exercitationem consequuntur autem quod eaque ab laudantium repudiandae! Illum quos dignissimos totam. Tenetur fuga et animi quam quae pariatur ducimus incidunt magni harum.
+					.about-block-wrap__right__text Design Shaker je prodejní přehlídka českého i zahraničního interiérového designu, nábytku a doplňků, která propojuje designéry, výrobce a jejich zákazníky. Stejně jako v minulých letech probíhá v rámci jarních veletrhů For Habitat, For Furniture, For Office a For Garden, které jsou největší akcí svého druhu v České republice a každoročně se jich zúčastní desítky tisíc návštěvníků.
 					include components/more-arrow.pug
 				include components/down-button.pug
 
@@ -34,15 +35,15 @@ html(lang="en")
 				.this-year-block__main
 					.what-this-year
 						h3.detail-title big deal
-						span Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis adipisci nesciunt fuga eaque facere illum, provident, nostrum doloremque quisquam ducimus laborum facilis libero quo corporis minus expedita placeat vero culpa?
+						span Sekce Big Deal představí výběr etablovaných českých výrobců i distributorů nejznámějších zahraničních značek. Přijďte vyzkoušet nábytek a doplňky prověřené kvality. Zalíbí-li se vám, můžete si je pořídit domů.
 						include components/more-arrow.pug
 					.what-this-year
 						h3.detail-title fresh space
-						span Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium libero eum unde assumenda optio corporis enim in aliquid adipisci corrupti. Dignissimos deleniti enim veniam, aspernatur voluptatibus repudiandae tempore quas ducimus!
+						span Kromě velkých firem a výrobců se letos na Design Shakeru objeví i mladá generace designérů, kteří ještě studují, nebo čerstvě tvoří pod vlastními značkami. Najdete zde design, který se za pár let možná stane sběratelským unikátem. Většina svěžích kousků bude na místě k mání.
 						include components/more-arrow.pug
 					.what-this-year
 						h3.detail-title field office
-						span Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt facilis quasi magni! Praesentium laborum enim consequatur, dolores dignissimos soluta aliquam debitis quidem, accusamus, ea distinctio quis rerum aliquid vitae nesciunt.
+						span Užší kontakt s designéry interiérů a architekty zajistí sekce Field office. Zde najdete zajímavé návrhy interiérů i jejich skutečné realizace. Inspirujte se a vyberte si kdo bude navrhovat interiér vám.
 						include components/more-arrow.pug
 					.clear-fix
 				include components/down-button.pug
@@ -50,8 +51,8 @@ html(lang="en")
 		section.why.blocks
 			img(src=require('./images/shairs.png'), alt="shairs", class="why__img")
 			.why-block
-				h2.why-block__title proč<br>vystavovat
-				span Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum mollitia fuga magnam sed amet assumenda, velit atque voluptatum tempora tempore molestiae dicta optio delectus consequatur facilis, incidunt ipsa totam architecto.
+				h2.why-block__title proč vystavovat
+				span Design by si měl především najít cestu ke svým zákazníkům a to je také hlavním cílem Design Shakeru, který představuje to nejlepší z českého i zahraničního interiérového designu široké veřejnosti. Jak tohoto cíle chceme dosáhnout?
 				include components/more-button-1.pug
 			include components/down-button.pug
 
@@ -65,4 +66,29 @@ html(lang="en")
 			include components/down-button.pug
 
 		section.contacts.blocks
-			.container 2
+			.contacts-block
+				h2.contacts-block__title kontakt
+				.contacts-block__contacts
+					.contacts-block__contacts-c1.vcard
+						include components/daniela.pug
+					.contacts-block__contacts-c2.vcard
+						include components/petr.pug
+					.contacts-block__contacts-c3.vcard
+						include components/jakub.pug
+					.contacts-block__contacts-c4.vcard
+						include components/tereza.pug
+					.clear-fix
+					hr
+				.contacts-block__place-and-subscribe
+					.contacts-block__place
+						h3.contacts-block__place--place Výstaviště PVA EXPO Praha Letňany
+						.contacts-block__place--adress Beranových 667
+						.contacts-block__place--town 199 00 Praha 9
+					.contacts-block__subscribe
+						span sledujte nás
+						.arrow
+						.fa.fa-twitter
+						.fa.fa-facebook
+			img(src=require('./images/map.jpg'), alt="")
+			.clear-fix
+			.contacts-block__copyright
