@@ -19,6 +19,9 @@ h2 {
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* COMMON */
+html {
+  font-family: sans-serif; }
+
 .why-block__button:hover, .button-slide-down:hover, .more:hover, .fa-twitter:hover, .fa-facebook:hover, .menu--button:hover {
   cursor: pointer; }
 
@@ -44,7 +47,7 @@ h2 {
     top: -20px;
     left: 60px;
     background-image: url(./images/more.png);
-    background-size: 100%; }
+    background-size: 100% 100%; }
 
 .fa-twitter, .fa-facebook {
   border-radius: 50%;
@@ -54,7 +57,7 @@ h2 {
   padding: 2px 5.5px; }
 
 .fa-twitter {
-  padding: 2px; }
+  padding: 2px 3px; }
 
 .clear-fix::after {
   content: '';
@@ -70,13 +73,17 @@ h2 {
   top: 0;
   left: calc( 50% + 450px);
   height: 100vh;
-  background-color: rgba(248, 248, 248, 0.93);
+  background-color: rgba(248, 248, 248, 0.73);
   width: calc( 50% - 450px);
   max-width: 500px;
   text-transform: uppercase;
   padding-top: 5px;
-  z-index: 15;
+  z-index: 20;
   transition: left 1s ease 0.5s; }
+  @media screen and (max-width: 1200px) {
+    .home-menu {
+      left: 75%;
+      width: 25%; } }
   .home-menu div {
     margin: 20px; }
     .home-menu div:hover {
@@ -89,6 +96,20 @@ h2 {
   top: 25px;
   left: calc( 50% + 350px);
   z-index: 16; }
+  @media screen and (min-width: 860px) and (max-width: 1200px) {
+    .menu--button {
+      left: calc( 50% - 82px);
+      background-color: rgba(248, 248, 248, 0.81);
+      padding: 10px 50px; } }
+  @media screen and (max-width: 859px) {
+    .menu--button {
+      width: 67px;
+      left: 0;
+      top: 0;
+      padding: 10px calc( 50% - 32px);
+      background-color: #f8f8f8;
+      border-top: 2px solid #aaa;
+      border-bottom: 2px solid #aaa; } }
 
 .nav-hide {
   left: 100%; }
@@ -98,12 +119,19 @@ h2 {
 .home-block {
   height: 600px;
   position: relative; }
+  @media screen and (max-width: 859px) {
+    .home-block {
+      top: 60px; } }
   .home-block .home-wrap {
     width: 100%;
     max-width: 900px;
     height: 600px;
     margin: auto;
     position: relative; }
+    @media screen and (min-width: 860px) and (max-width: 1200px) {
+      .home-block .home-wrap {
+        top: 88px;
+        height: 688px; } }
     .home-block .home-wrap .home-block__title-black, .home-block .home-wrap .home-block__title-yellow, .home-block .home-wrap .home-block__title-blue, .home-block .home-wrap .it-img, .home-block .home-wrap .shair-img {
       position: absolute; }
     .home-block .home-wrap .home-block__title {
@@ -169,12 +197,18 @@ h2 {
       width: 265px;
       height: 292px;
       z-index: 1; }
+  @media screen and (max-width: 859px) {
+    .home-block .menu--button {
+      top: -60px; } }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* SECOND BLOCK - ABOUT BLOCK */
 .about-block {
   height: 600px;
   background-image: url(./images/back.jpg); }
+  @media screen and (min-width: 860px) and (max-width: 1200px) {
+    .about-block {
+      margin-top: 176px; } }
   .about-block-wrap {
     width: 100%;
     max-width: 900px;
@@ -195,6 +229,7 @@ h2 {
         font-family: 'Baloo Tammudu';
         line-height: 1.5;
         font-size: 48px;
+        min-width: 173px;
         display: block;
         position: absolute;
         top: 100px;
@@ -283,13 +318,16 @@ h2 {
       letter-spacing: 0.1em;
       font-family: 'Baloo Tammudu';
       line-height: 1.5;
-      font-size: 58px; }
+      font-size: 58px;
+      position: relative;
+      z-index: 2; }
     .why-block span {
       display: block;
       margin: 50px 0;
       line-height: 1.5; }
     .why-block__button {
       width: 50%;
+      min-width: 268px;
       border-radius: 1px;
       background-color: #83d0f5;
       text-align: center;
@@ -309,7 +347,8 @@ h2 {
 /* FIFTH BLOCK - DATE BLOCK */
 .date {
   height: 850px;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .date__img {
     position: absolute;
     float: left;
@@ -322,8 +361,12 @@ h2 {
     height: 100%;
     padding: 200px 0;
     position: relative;
-    width: 550px;
+    width: 50%;
+    max-width: 550px;
     z-index: 10; }
+    @media screen and (max-width: 859px) {
+      .date-block {
+        margin: 0 45% 200px 45%; } }
     .date-block__title {
       font-family: Cinzel;
       font-size: 88px;
@@ -362,7 +405,11 @@ h2 {
       text-transform: uppercase;
       font-weight: 900;
       letter-spacing: -0.06em;
-      padding: 90px 0; }
+      padding: 90px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-family: 'Baloo Tammudu';
+      line-height: 1.5; }
     .contacts-block__contacts .vcard {
       margin: 1%;
       width: 23%;
