@@ -19,9 +19,13 @@ body {
   padding: 0;
   margin: 0; }
 
+.why-block__button:hover, .button-slide-down:hover, .more:hover, .fa-twitter:hover, .fa-facebook:hover, .menu--button:hover {
+  cursor: pointer; }
+
 .button-slide-down {
   width: 80px;
-  height: 80px; }
+  height: 80px;
+  border-radius: 50%; }
 
 .blocks {
   width: 100%; }
@@ -38,6 +42,16 @@ body {
     background-image: url(./images/more.png);
     background-size: 100%; }
 
+.fa-twitter, .fa-facebook {
+  border-radius: 50%;
+  border: 1px solid #000; }
+
+.fa-facebook {
+  padding: 2px 5.5px; }
+
+.fa-twitter {
+  padding: 2px; }
+
 .clear-fix::after {
   content: '';
   display: block;
@@ -46,9 +60,40 @@ body {
   visibility: hidden; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
+/* NAV MENU - HOME PAGE */
+.home-menu {
+  position: fixed;
+  top: 0;
+  left: calc( 50% + 450px);
+  height: 100vh;
+  background-color: rgba(248, 248, 248, 0.93);
+  width: calc( 50% - 450px);
+  max-width: 500px;
+  text-transform: uppercase;
+  padding-top: 5px;
+  z-index: 15;
+  transition: left 1s ease 0.5s; }
+  .home-menu div {
+    margin: 20px; }
+    .home-menu div:hover {
+      cursor: pointer; }
+  .home-menu span {
+    margin-right: 10px; }
+
+.menu--button {
+  position: absolute;
+  top: 25px;
+  left: calc( 50% + 350px);
+  z-index: 16; }
+
+.nav-hide {
+  left: 100%; }
+
+/* - - - - - - - - - - - - - - - - - - - - - */
 /* FIRST BLOCK - HOME PAGE */
 .home-block {
-  height: 600px; }
+  height: 600px;
+  position: relative; }
   .home-block .home-wrap {
     width: 100%;
     max-width: 900px;
@@ -118,7 +163,8 @@ body {
     .home-block .home-wrap .button-slide-down {
       position: absolute;
       top: 450px;
-      left: calc( 50% - 40px); }
+      left: calc( 50% - 40px);
+      z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* SECOND BLOCK - ABOUT BLOCK */
@@ -169,13 +215,14 @@ body {
     .about-block-wrap .button-slide-down {
       position: absolute;
       top: 450px;
-      left: calc( 50% - 40px); }
+      left: calc( 50% - 40px);
+      z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* THIRD BLOCK - THIS YEAR BLOCK */
 .this-year {
   height: 750px;
-  margin-top: 100px;
+  padding-top: 100px;
   position: relative; }
   .this-year-block {
     width: 100%;
@@ -212,8 +259,9 @@ body {
           width: 150px; }
   .this-year .button-slide-down {
     position: absolute;
-    top: 600px;
-    left: calc( 50% - 40px); }
+    top: 700px;
+    left: calc( 50% - 40px);
+    z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* FOURTH BLOCK - WHY BLOCK */
@@ -258,22 +306,25 @@ body {
   .why .button-slide-down {
     position: absolute;
     top: 650px;
-    left: calc( 50% - 40px); }
+    left: calc( 50% - 40px);
+    z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* FIFTH BLOCK - DATE BLOCK */
 .date {
-  height: 650px;
+  height: 850px;
   position: relative; }
   .date__img {
     position: absolute;
     float: left;
-    top: -50px;
+    top: 80px;
     height: 600px;
     left: calc( 10% - 450px);
     z-index: 9; }
   .date-block {
-    margin: 200px 45%;
+    margin: 10px 45% 200px 45%;
+    height: 100%;
+    padding: 200px 0;
     position: relative;
     width: 550px;
     z-index: 10; }
@@ -296,8 +347,9 @@ body {
       margin-bottom: 25px; }
   .date .button-slide-down {
     position: absolute;
-    top: 500px;
-    left: calc( 50% - 40px); }
+    top: 700px;
+    left: calc( 50% - 40px);
+    z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* SIX BLOCK - DATE BLOCK */
@@ -346,12 +398,6 @@ body {
         height: 15px;
         background-image: url(./images/more.png);
         background-size: 100% 100%; }
-      .contacts-block__subscribe .fa {
-        padding: 2px;
-        border-radius: 50%;
-        border: 1px solid #000; }
-        .contacts-block__subscribe .fa-facebook {
-          padding: 2px 5.5px; }
   .contacts .contacts-block__copyright {
     width: 100%;
     height: 100px;
@@ -362,4 +408,4 @@ body {
       content: '2014 Design Shaker. All right reserved.';
       padding: 0 calc( 50% - 172px);
       position: relative;
-      top: 45px; }
+      top: 40px; }

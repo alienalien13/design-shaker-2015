@@ -26,6 +26,7 @@ $prime-blocks-back: url('./images/back.jpg')
 	position: absolute
 	top: $top
 	left: calc( 50% - 40px )
+	z-index: 11
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -43,13 +44,19 @@ h2
 /* - - - - - - - - - - - - - - - - - - - - - */
 
 /* COMMON */
+
 body
 	padding: 0
 	margin: 0
 
+.why-block__button, .button-slide-down, .more, .fa-twitter, .fa-facebook, .menu--button
+	&:hover
+		cursor: pointer
+
 .button-slide-down
 	width: 80px
 	height: 80px
+	border-radius: 50%
 
 .blocks
 	width: 100%
@@ -66,6 +73,15 @@ body
 		background-image: url('./images/more.png')
 		background-size: 100%
 
+.fa-twitter, .fa-facebook
+	border-radius: 50%
+	border: 1px solid #000
+
+.fa-facebook
+	padding: 2px 5.5px
+.fa-twitter
+	padding: 2px
+
 .clear-fix::after
 	content: ''
 	display: block
@@ -75,10 +91,43 @@ body
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
+/* NAV MENU - HOME PAGE */
+
+.home-menu
+	position: fixed
+	top: 0
+	//left: calc( 100% - ( 100% - 900px ) / 2 )
+	left: calc( 50% + 450px )
+	height: 100vh
+	background-color: rgba(248, 248, 248, 0.93)
+	width: calc( 50% - 450px )
+	max-width: 500px
+	text-transform: uppercase
+	padding-top: 5px
+	z-index: 15
+	transition: left 1s ease 0.5s
+	div
+		margin: 20px
+		&:hover
+			cursor: pointer
+	span
+		margin-right: 10px
+.menu--button
+	position: absolute
+	top: 25px
+	left: calc( 50% + 350px )
+	z-index: 16
+.nav-hide
+	left: 100%
+	
+
+/* - - - - - - - - - - - - - - - - - - - - - */
+
 /* FIRST BLOCK - HOME PAGE */
 
 .home-block
 	height: 600px
+	position: relative
 	.home-wrap
 		width: 100%
 		max-width: $block-width
@@ -167,7 +216,7 @@ body
 
 .this-year
 	height: 750px
-	margin-top: 100px
+	padding-top: 100px
 	position: relative
 	&-block
 		width: 100%
@@ -197,7 +246,7 @@ body
 					height: 18px
 					width: 150px
 	.button-slide-down
-			@include down-button(600px)
+			@include down-button(700px)
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -207,6 +256,7 @@ body
 	padding: 50px 0
 	background-image: $prime-blocks-back
 	position: relative
+	//margin-bottom: 50px
 	&__img
 		top: 70px
 		height: 600px
@@ -246,17 +296,19 @@ body
 /* FIFTH BLOCK - DATE BLOCK */
 
 .date
-	height: 650px
+	height: 850px
 	position: relative
 	&__img
 		position: absolute
 		float: left
-		top: -50px
+		top: 80px
 		height: 600px
 		left: calc( 10% - 450px )
 		z-index: 9
 	&-block
-		margin: 200px 45%
+		margin: 10px 45% 200px 45%
+		height: 100%
+		padding: 200px 0
 		position: relative
 		width: 550px
 		position: 
@@ -273,7 +325,7 @@ body
 			color: #bbb
 			margin-bottom: 25px
 	.button-slide-down
-		@include down-button(500px)
+		@include down-button(700px)
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -322,12 +374,6 @@ body
 				height: 15px
 				background-image: url('./images/more.png')
 				background-size: 100% 100%
-			.fa
-				padding: 2px
-				border-radius: 50%
-				border: 1px solid #000
-				&-facebook
-					padding: 2px 5.5px
 	.contacts-block__copyright
 		width: 100%
 		height: 100px
@@ -338,4 +384,4 @@ body
 			content: '2014 Design Shaker. All right reserved.'
 			padding: 0 calc( 50% - 172px )
 			position: relative
-			top: 45px
+			top: 40px

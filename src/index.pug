@@ -4,9 +4,22 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
 		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
 		title DesignShaker
 	body
+
+		.home-menu.nav
+			.home-menu__about o akci
+			.home-menu__big-deal big deal
+			.home-menu__fresh fresh select
+			.home-menu__office field office
+			.home-menu__exhibitor pro vystavovatele
+			.home-menu__contact kontakt
+			.home-menu__socials
+				span.fa.fa-twitter
+				span.fa.fa-facebook
+			.home-menu__buttons
 
 		section.home-block.blocks
 			.home-wrap
@@ -17,6 +30,7 @@ html(lang="en")
 				.home-block__title.home-block__title-blue design<br>shaker<br>2015
 				include components/down-button.pug
 				.home-block-info 19. - 22.3.<br>pva expo praha<br>Letňany
+			include components/menu--button.pug
 
 		section.about-block.blocks
 			.about-block-wrap
@@ -28,6 +42,7 @@ html(lang="en")
 					.about-block-wrap__right__text Design Shaker je prodejní přehlídka českého i zahraničního interiérového designu, nábytku a doplňků, která propojuje designéry, výrobce a jejich zákazníky. Stejně jako v minulých letech probíhá v rámci jarních veletrhů For Habitat, For Furniture, For Office a For Garden, které jsou největší akcí svého druhu v České republice a každoročně se jich zúčastní desítky tisíc návštěvníků.
 					include components/more-arrow.pug
 				include components/down-button.pug
+				include components/menu--button.pug
 
 		section.this-year.blocks
 			.this-year-block
@@ -47,6 +62,8 @@ html(lang="en")
 						include components/more-arrow.pug
 					.clear-fix
 				include components/down-button.pug
+				include components/menu--button.pug
+				
 
 		section.why.blocks
 			img(src=require('./images/shairs.png'), alt="shairs", class="why__img")
@@ -55,6 +72,7 @@ html(lang="en")
 				span Design by si měl především najít cestu ke svým zákazníkům a to je také hlavním cílem Design Shakeru, který představuje to nejlepší z českého i zahraničního interiérového designu široké veřejnosti. Jak tohoto cíle chceme dosáhnout?
 				include components/more-button-1.pug
 			include components/down-button.pug
+			include components/menu--button.pug
 
 		section.date.blocks
 			img(src=require('./images/glasses.png'), alt="glasses", class="date__img")
@@ -63,6 +81,7 @@ html(lang="en")
 				.date-block__date 19. - 22.3.<br>2015
 				.date-block__place pva praha letňany
 				include components/more-button-2.pug
+			include components/menu--button.pug
 			include components/down-button.pug
 
 		section.contacts.blocks
