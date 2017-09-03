@@ -398,7 +398,7 @@ html {
     margin: 70px 0 0 0; }
   .contacts-block {
     width: 80%;
-    width-max: 900px;
+    max-width: 900px;
     margin: auto; }
     .contacts-block__title {
       font-size: 45px;
