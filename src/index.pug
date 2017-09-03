@@ -6,10 +6,12 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
 		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Ultra", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Cinzel:900", rel="stylesheet")
 		title DesignShaker
 	body
 
-		.home-menu.nav
+		.home-menu.nav.nav-hide
 			.home-menu__about o akci
 			.home-menu__big-deal big deal
 			.home-menu__fresh fresh select
@@ -61,10 +63,9 @@ html(lang="en")
 						span Užší kontakt s designéry interiérů a architekty zajistí sekce Field office. Zde najdete zajímavé návrhy interiérů i jejich skutečné realizace. Inspirujte se a vyberte si kdo bude navrhovat interiér vám.
 						include components/more-arrow.pug
 					.clear-fix
-				include components/down-button.pug
 				include components/menu--button.pug
+			include components/down-button.pug
 				
-
 		section.why.blocks
 			img(src=require('./images/shairs.png'), alt="shairs", class="why__img")
 			.why-block

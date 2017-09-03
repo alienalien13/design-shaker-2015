@@ -3,6 +3,10 @@
 /* MIXINS */
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* RESET */
+body {
+  padding: 0;
+  margin: 0; }
+
 h2 {
   padding: 0;
   margin: 0; }
@@ -15,17 +19,17 @@ h2 {
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* COMMON */
-body {
-  padding: 0;
-  margin: 0; }
-
 .why-block__button:hover, .button-slide-down:hover, .more:hover, .fa-twitter:hover, .fa-facebook:hover, .menu--button:hover {
   cursor: pointer; }
 
 .button-slide-down {
   width: 80px;
   height: 80px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  position: absolute;
+  top: calc( 100% - 160px);
+  left: calc( 50% - 40px);
+  z-index: 11; }
 
 .blocks {
   width: 100%; }
@@ -108,15 +112,18 @@ body {
         top: 20px;
         left: 40px; }
       .home-block .home-wrap .home-block__title-yellow {
-        font-family: Segoe UI;
-        top: -13px;
-        left: 51%;
+        font-family: "Ultra";
+        top: 60px;
+        left: 45%;
         transform: rotate(90deg);
         color: #ffdd00;
         font-size: 45px;
         text-transform: uppercase;
         font-weight: 900;
-        letter-spacing: -0.06em; }
+        letter-spacing: -0.06em;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        font-weight: 500; }
       .home-block .home-wrap .home-block__title-blue {
         font-family: Segoe UI;
         top: 30%;
@@ -128,7 +135,7 @@ body {
         font-weight: 900;
         letter-spacing: -0.06em; }
       .home-block .home-wrap .home-block__title-black {
-        font-family: Segoe UI;
+        font-family: "Baloo Tammudu";
         top: 30px;
         left: 9%;
         transform: none;
@@ -136,18 +143,20 @@ body {
         font-size: 45px;
         text-transform: uppercase;
         font-weight: 900;
-        letter-spacing: -0.06em; }
+        letter-spacing: -0.06em;
+        line-height: 1;
+        font-size: 60px;
+        font-weight: 500; }
     .home-block .home-wrap .home-block-info {
-      font-size: 45px;
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: -0.06em;
+      font-family: 'Baloo Tammudu', serif;
       z-index: 3;
+      text-transform: uppercase;
       color: #aaa;
+      line-height: 1;
       position: absolute;
       left: 9%;
       top: 250px;
-      font-size: 25px; }
+      font-size: 30px; }
     .home-block .home-wrap .it-img {
       top: 0;
       left: 28%;
@@ -160,11 +169,6 @@ body {
       width: 265px;
       height: 292px;
       z-index: 1; }
-    .home-block .home-wrap .button-slide-down {
-      position: absolute;
-      top: 450px;
-      left: calc( 50% - 40px);
-      z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* SECOND BLOCK - ABOUT BLOCK */
@@ -186,10 +190,11 @@ body {
         height: 500px;
         padding: 50px 0; }
       .about-block-wrap__left__block-title {
-        font-size: 45px;
         text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: -0.06em;
+        letter-spacing: 0.1em;
+        font-family: 'Baloo Tammudu';
+        line-height: 1.5;
+        font-size: 48px;
         display: block;
         position: absolute;
         top: 100px;
@@ -212,16 +217,11 @@ body {
       margin: 100px 0; }
       .about-block-wrap__right__text {
         line-height: 1.5; }
-    .about-block-wrap .button-slide-down {
-      position: absolute;
-      top: 450px;
-      left: calc( 50% - 40px);
-      z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* THIRD BLOCK - THIS YEAR BLOCK */
 .this-year {
-  height: 750px;
+  height: 1000px;
   padding-top: 100px;
   position: relative; }
   .this-year-block {
@@ -229,12 +229,15 @@ body {
     max-width: 700px;
     margin: auto; }
     .this-year-block__title {
-      text-align: center;
-      font-size: 45px;
       text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: -0.06em;
+      letter-spacing: 0.1em;
+      font-family: 'Baloo Tammudu';
+      line-height: 1.5;
+      vertical-align: middle;
+      text-align: justify;
+      font-size: 58px;
       margin: 5px;
+      line-height: 1.6;
       color: #ffdd00; }
     .this-year-block__main {
       margin: 100px 0; }
@@ -242,26 +245,23 @@ body {
         margin: 1%;
         float: left;
         width: 30%;
-        height: 300px; }
+        height: 500px; }
         .this-year-block__main .what-this-year .detail-title {
-          font-size: 45px;
           text-transform: uppercase;
-          font-weight: 900;
-          letter-spacing: -0.06em;
+          letter-spacing: 0.1em;
+          font-family: 'Baloo Tammudu';
+          line-height: 1.5;
           font-size: 20px; }
         .this-year-block__main .what-this-year span {
           display: block;
           height: 220px;
-          line-height: 1.5; }
+          line-height: 1.8; }
+        .this-year-block__main .what-this-year .more {
+          margin-top: 120px; }
         .this-year-block__main .what-this-year .more__arrow {
           top: -18px;
           height: 18px;
           width: 150px; }
-  .this-year .button-slide-down {
-    position: absolute;
-    top: 700px;
-    left: calc( 50% - 40px);
-    z-index: 11; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* FOURTH BLOCK - WHY BLOCK */
@@ -279,10 +279,11 @@ body {
     width: 900px;
     width: 300px; }
     .why-block__title {
-      font-size: 45px;
       text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: -0.06em; }
+      letter-spacing: 0.1em;
+      font-family: 'Baloo Tammudu';
+      line-height: 1.5;
+      font-size: 58px; }
     .why-block span {
       display: block;
       margin: 50px 0;
@@ -302,12 +303,7 @@ body {
         height: 23px;
         width: 18px;
         top: 13px;
-        left: 81%; }
-  .why .button-slide-down {
-    position: absolute;
-    top: 650px;
-    left: calc( 50% - 40px);
-    z-index: 11; }
+        left: 80%; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* FIFTH BLOCK - DATE BLOCK */
@@ -329,27 +325,23 @@ body {
     width: 550px;
     z-index: 10; }
     .date-block__title {
-      font-size: 45px;
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: -0.06em; }
+      font-family: Cinzel;
+      font-size: 88px;
+      line-height: 0.8;
+      text-transform: uppercase; }
     .date-block__date {
       margin: 20px 0;
-      font-size: 35px;
-      font-weight: 900; }
+      font-family: Cinzel;
+      font-size: 35px; }
     .date-block__place {
       font-size: 45px;
       text-transform: uppercase;
       font-weight: 900;
       letter-spacing: -0.06em;
       font-size: 17px;
-      color: #bbb;
-      margin-bottom: 25px; }
-  .date .button-slide-down {
-    position: absolute;
-    top: 700px;
-    left: calc( 50% - 40px);
-    z-index: 11; }
+      color: #777;
+      margin-bottom: 35px;
+      font-weight: 400; }
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 /* SIX BLOCK - DATE BLOCK */

@@ -22,16 +22,19 @@ $prime-blocks-back: url('./images/back.jpg')
 	color: $color
 	@include text-up()
 
-@mixin down-button($top)
-	position: absolute
-	top: $top
-	left: calc( 50% - 40px )
-	z-index: 11
+@mixin baloo-font()
+	text-transform: uppercase
+	letter-spacing: 0.1em
+	font-family: 'Baloo Tammudu'
+	line-height: 1.5
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
 /* RESET */
 
+body
+	padding: 0
+	margin: 0
 h2
 	padding: 0
 	margin: 0
@@ -45,10 +48,6 @@ h2
 
 /* COMMON */
 
-body
-	padding: 0
-	margin: 0
-
 .why-block__button, .button-slide-down, .more, .fa-twitter, .fa-facebook, .menu--button
 	&:hover
 		cursor: pointer
@@ -57,6 +56,10 @@ body
 	width: 80px
 	height: 80px
 	border-radius: 50%
+	position: absolute
+	top: calc( 100% - 160px )
+	left: calc( 50% - 40px )
+	z-index: 11
 
 .blocks
 	width: 100%
@@ -142,19 +145,27 @@ body
 				top: 20px
 				left: 40px
 			&-yellow
-				@include title-icon(Segoe UI, -13px, 51%, rotate(90deg), #ffdd00)
+				@include title-icon('Ultra', 60px, 45%, rotate(90deg), #ffdd00)
+				letter-spacing: 0.1em
+				line-height: 1
+				font-weight: 500
 			&-blue
 				@include title-icon(Segoe UI, 30%, 75%, skewY(-15deg), #83d0f5)
 			&-black
-				@include title-icon(Segoe UI, 30px, 9%, none, #000)
+				@include title-icon('Baloo Tammudu', 30px, 9%, none, #000)
+				line-height: 1
+				font-size: 60px
+				font-weight: 500
 		.home-block-info
-			@include text-up()
+			font-family: 'Baloo Tammudu', serif
 			z-index: 3
+			text-transform: uppercase
 			color: #aaa
+			line-height: 1
 			position: absolute
 			left: 9%
 			top: 250px
-			font-size: 25px
+			font-size: 30px
 		.it-img
 			top: 0
 			left: 28%
@@ -167,8 +178,7 @@ body
 			width: 265px
 			height: 292px
 			z-index: 1
-		.button-slide-down
-			@include down-button(450px)
+
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -192,7 +202,8 @@ body
 				height: 500px
 				padding: 50px 0
 			&__block-title
-				@include text-up()
+				@include baloo-font()
+				font-size: 48px
 				display: block
 				position: absolute
 				top: $block-about-text-gap-top
@@ -207,15 +218,14 @@ body
 			margin: $block-about-text-gap-top 0
 			&__text
 				line-height: 1.5
-		.button-slide-down
-			@include down-button(450px)
+
 						
 /* - - - - - - - - - - - - - - - - - - - - - */
 
 /* THIRD BLOCK - THIS YEAR BLOCK */
 
 .this-year
-	height: 750px
+	height: 1000px
 	padding-top: 100px
 	position: relative
 	&-block
@@ -223,9 +233,12 @@ body
 		max-width: 700px
 		margin: auto
 		&__title
-			text-align: center
-			@include text-up()
+			@include baloo-font()
+			vertical-align: middle
+			text-align: justify
+			font-size: 58px
 			margin: 5px
+			line-height: 1.6
 			color: #ffdd00
 		&__main
 			margin: 100px 0
@@ -233,20 +246,20 @@ body
 				margin: 1%
 				float: left
 				width: 30%
-				height: 300px
+				height: 500px
 				.detail-title
-					@include text-up()
+					@include baloo-font()
 					font-size: 20px
 				span
 					display: block
 					height: 220px
-					line-height: 1.5
+					line-height: 1.8
+				.more
+					margin-top: 120px
 				.more__arrow
 					top: -18px
 					height: 18px
 					width: 150px
-	.button-slide-down
-			@include down-button(700px)
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -267,7 +280,8 @@ body
 		width: $block-width
 		width: 300px
 		&__title
-			@include text-up()
+			@include baloo-font()
+			font-size: 58px
 		span
 			display: block
 			margin: 50px 0
@@ -287,9 +301,7 @@ body
 				height: 23px
 				width: 18px
 				top: 13px
-				left: 81%
-	.button-slide-down
-		@include down-button(650px)
+				left: 80%
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
@@ -314,18 +326,20 @@ body
 		position: 
 		z-index: 10
 		&__title
-			@include text-up()
+			font-family: Cinzel
+			font-size: 88px
+			line-height: 0.8
+			text-transform: uppercase
 		&__date
 			margin: 20px 0
+			font-family: Cinzel
 			font-size: 35px
-			font-weight: 900
 		&__place
 			@include text-up()
 			font-size: 17px
-			color: #bbb
-			margin-bottom: 25px
-	.button-slide-down
-		@include down-button(700px)
+			color: #777
+			margin-bottom: 35px
+			font-weight: 400
 
 /* - - - - - - - - - - - - - - - - - - - - - */
 
